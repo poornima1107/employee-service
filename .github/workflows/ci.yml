@@ -1,4 +1,4 @@
-Name: Employee Service CI
+name: Employee Service CI
 
 on:
   push:
