@@ -1,0 +1,26 @@
+Name: Employee Service CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+
+
+      runs-on: ubuntu-latest
+
+      steps:
+
+        - name: Checkout source
+          uses: actions/checkout@v4
+
+        - name: Setup-Java
+          uses: actions/setupjava@v4
+          with:
+            distribution: temurin
+            java-version: 24
+
+        - name: Build Project
+          uses: ./mvnw clean install
